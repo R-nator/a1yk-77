@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Album3</title>
+  <style>
+  body{
+			background: black;	
+			background-repeat: no-repeat;
+			background-size: 360px auto;
+			width: 360px;
+		}
+		h1 {font-family: "Lucida Console", "Courier New", monospace;
+			font-size:32px;	
+  			color: rgb(240, 19, 3);
+			  text-align: center;
+			
+		}
+		h2 {	font-family: "Lucida Console", "Courier New", monospace;		
+			font-size:22px;	
+  			color: #f93;
+			text-align: center;
+			}
+		
+			
+		#divTela {
+			background:  rgb(2, 2, 80);
+			max-width: 344px;
+  			font-family: "Lucida Console", "Courier New", monospace;
+  			font-size:22px;	
+  			color: #fff;
+		}
+		#divMenu{
+			
+			/*background: rgb(1, 83, 1) ;
+			color: #f0f;
+			background-image: url('1.gif');	*/		
+			max-width: 400px;
+		}
+		#divBotões 
+		{ 
+			max-width: 400px;
+		}
+		#divPalpites {	background:  rgb(71, 0, 0) ;
+			max-width: 344px;
+  			font-family: "Lucida Console", "Courier New", monospace;
+  			font-size:22px;	
+  			color: rgb(252, 229, 83);
+		}
+		.tema {
+			font-family: "Lucida Console", "Courier New", monospace;
+			width: 200px;
+			height: 35px;
+			font-size: 28px;
+			color: #f40;
+			margin: 20px 80px;
+			/*white-space: normal;*/
+			/*display: inline-block;*/
+			
+		}
+		.botão {
+			width: 54px;
+			height: 48px;
+			font-size: 24px;
+			margin: 2px 0px;
+			/*white-space: normal;*/
+			display: inline-block;
+		}	
+		.gameover {
+			background-color: red;		
+			color: rgb(255, 255, 255);
+
+		}
+		.segredo {
+			background-color: rgb(238, 255, 0);
+			color: rgb(0, 0, 0);
+			border-style: solid;
+			border-width: medium;
+		}
+		.transparente {
+			opacity: 0;
+		}
+  </style>
+</head>
+
+<body>
+
+ <div id="divTela">		
+	</div>
+	
+<div id="divMenu">
+<h1>Album3</h1>
+<h2>Sets</h2>
+		<button class="tema" id="bot1" onclick="escolherTema(1)">101 a 110</button>
+		<button class="tema" id="bot2" onclick="escolherTema(11)">111 a 120</button>
+		<button class="tema" id="bot3" onclick="escolherTema(21)">121 a 130</button>
+		<button class="tema" id="bot4" onclick="escolherTema(31)">131 a 140</button>
+		<button class="tema" id="bot5" onclick="escolherTema(41)">141 a 150</button>
+</div>
+	<div id="divBotões">
+		<button class="botão" value="1">1</button>
+		<button class="botão" value="2">2</button>
+		<button class="botão" value="3">3</button>
+		<button class="botão" value="4">4</button>
+		<button class="botão" value="5">5</button>
+		<button class="botão" value="6">6</button>
+		<button class="botão" value="7">7</button>
+		<button class="botão" value="8">8</button>
+		<button class="botão" value="9">9</button>
+		<button class="botão" value="10">10</button>
+		<button class="botão" value="11">11</button>
+		<button class="botão" value="12">12</button>
+		<button class="botão" value="13">13</button>
+		<button class="botão" value="14">14</button>
+		<button class="botão" value="15">15</button>
+		<button class="botão" value="16">16</button>
+		<button class="botão" value="17">17</button>
+		<button class="botão" value="18">18</button>
+		<button class="botão" value="19">19</button>
+		<button class="botão" value="20">20</button>
+		<button class="botão" value="21">21</button>
+		<button class="botão" value="22">22</button>
+		<button class="botão" value="23">23</button>
+		<button class="botão" value="24">24</button>
+		<button class="botão" value="25">25</button>
+		<button class="botão" value="26">26</button>
+		<button class="botão" value="27">27</button>
+		<button class="botão" value="28">28</button>
+		<button class="botão" value="29">29</button>
+		<button class="botão" value="30">30</button>
+		<button class="botão" value="31">31</button>
+		<button class="botão" value="32">32</button>
+		<button class="botão" value="33">33</button>
+		<button class="botão" value="34">34</button>
+		<button class="botão" value="35">35</button>
+		<button class="botão" value="36">36</button>
+		<button class="botão" value="37">37</button>
+		<button class="botão" value="38">38</button>
+		<button class="botão" value="39">39</button>
+		<button class="botão" value="40">40</button>
+		<button class="botão" value="41">41</button>
+		<button class="botão" value="42">42</button>
+		<button class="botão" value="43">43</button>
+		<button class="botão" value="44">44</button>
+		<button class="botão" value="45">45</button>
+		<button class="botão" value="46">46</button>
+		<button class="botão" value="47">47</button>
+		<button class="botão" value="48">48</button>
+		<button class="botão" value="49">49</button>
+		<button class="botão" value="50">50</button>
+		<button class="botão" value="51">51</button>
+		<button class="botão" value="52">52</button>
+		<button class="botão" value="53">53</button>
+		<button class="botão" value="54">54</button>
+		<button class="botão" value="55">55</button>
+		<button class="botão" value="56">56</button>
+		<button class="botão" value="57">57</button>
+		<button class="botão" value="58">58</button>
+		<button class="botão" value="59">59</button>
+		<button class="botão" value="60">60</button>
+	</div>
+	 <div id="divPalpites">		
+	</div>
+ <script>
+ 		mostrarMenu();// e ocultar os números e informações de tela e chances	
+		function mostrarMenu(){		
+			document.body.style.backgroundImage = "url('https://64.media.tumblr.com/06db606ff376258d94317bc8aa4e419b/f33d8df1d25c4010-4c/s2048x3072/c51454f57b4dececad5f52b07d0f60a9e4092fb4.jpg')";		
+			document.getElementById("divTela").style.display = 'none';
+			document.getElementById("divMenu").style.display = 'block';
+			document.getElementById("divBotões").style.display = 'none';
+			document.getElementById("divPalpites").style.display = 'none';	
+		}
+		
+		//desabilitar os botões de algumas "Telas" no início
+		document.getElementById("bot2").disabled = true;
+		document.getElementById("bot3").disabled = true;
+		document.getElementById("bot4").disabled = true;
+		document.getElementById("bot5").disabled = true;
+		function escolherTema(escolha){	
+			tela = escolha;
+			mudarTela();
+			//document.body.style.backgroundImage = "url(img/" + tela + ".jpg)";	
+			chance = 10;
+			stringTela = document.getElementById("divTela");
+			stringTela.innerHTML = "Tela " + tela;
+			stringPalpites = document.getElementById("divPalpites");
+			stringPalpites.innerHTML = "Palpites: "  + chance;
+			mostrarTelaNumerosChances()	;// e ocultar os menus
+		
+		}
+		
+		function mostrarTelaNumerosChances() {
+			document.getElementById("divTela").style.display = 'block';
+			document.getElementById("divMenu").style.display = 'none';
+			document.getElementById("divBotões").style.display = 'block';
+			document.getElementById("divPalpites").style.display = 'block';	
+		}
+
+		let novaCor = 0; //para botoes VERMELHO/AMARELO
+		let terminou = 0; //a tela ou as chances
+		let ativos = [];
+		let arrayBotões = document.getElementsByClassName("botão");
+
+		registrarAtivos();
+		function registrarAtivos(){
+			for (let i = 0; i <  arrayBotões.length;  i++){
+				ativos[i] = i+1;
+			}
+		}
+
+		let segredo = Math.floor(Math.random()*arrayBotões.length) + 1;		
+		//
+ 		console.log("segredo=",segredo);
+		//let palpite;
+		for (let i = 0; i < arrayBotões.length; i++) {			
+			arrayBotões[i].addEventListener("click", function() {			
+				if (terminou){
+					if(chance<=0){					
+						mostrarMenu();					
+						arrayBotões[palpite-1].classList.remove("gameover");																			
+						arrayBotões[segredo-1].disabled=false;
+						arrayBotões[segredo-1].classList.remove("segredo");				
+					}					
+					else if (tela%10 == 0){								
+						if(tela == 10)
+							document.getElementById("bot2").disabled = false;
+						else if(tela == 20)
+							document.getElementById("bot3").disabled = false;
+						else if(tela == 30)
+							document.getElementById("bot4").disabled = false;
+						else if(tela == 40)
+							document.getElementById("bot5").disabled = false;
+						else if(tela == 50)						
+							document.body.style.backgroundImage = "url(img/53.jpg)";
+						mostrarMenu();										
+					}
+					else {
+						tela++;
+						mudarTela();
+					}
+					chance=chance+4;			
+					stringTela.innerHTML = "Tela "+ tela ;
+					stringPalpites.innerHTML = "Palpites: "  + chance;
+					terminou = 0;
+					arrayBotões[palpite-1].classList.remove("segredo");
+					segredo = Math.floor(Math.random()*arrayBotões.length) + 1;
+					ativar();
+					registrarAtivos();
+				}
+				else{				
+					palpite = parseInt(this.value);
+					comparar(palpite);
+					desativar();
+				}							
+			});
+		}
+		function desativar() {	
+			for (let i = 0; i < arrayBotões.length; i++) {		
+				if(novaCor){
+					arrayBotões[i].disabled=true;
+					if (chance<=0){
+						arrayBotões[palpite-1].classList.add("gameover");						
+					}													
+					arrayBotões[segredo-1].disabled=false;
+					arrayBotões[segredo-1].classList.add("segredo");								
+					terminou=1;				
+				}											
+				else if(!ativos.includes(parseInt(arrayBotões[i].value))){
+					arrayBotões[i].disabled=true;
+					arrayBotões[i].classList.add("transparente");				
+				}			
+			}
+			novaCor=0;
+		}
+
+		function ativar() {
+			for (let i = 0; i < arrayBotões.length; i++) {	
+				arrayBotões[i].disabled=false;
+				arrayBotões[i].classList.remove("transparente");		
+			}			
+		}
+
+		function comparar(palpite){					
+			if(palpite < segredo){
+				chance--;
+				if (chance == 0)
+					mostrarGameover();				
+				else 
+					mostrarDica(">");
+				var index = ativos.indexOf(palpite);
+				//remove do início até a posição do palpite
+				ativos.splice(0,index+1);								
+			}
+			else if(palpite > segredo){
+				chance--;
+				if (chance == 0)
+					mostrarGameover();
+				else 
+					mostrarDica("<");
+				var index = ativos.indexOf(palpite);
+				//remove da posição do palpite até o final
+				ativos.splice(index);					
+			}	
+			else if(palpite == segredo){	
+					arrayBotões[palpite-1].classList.add("segredo");
+					if (tela%10 == 0){
+						if (tela == 50)
+							stringTela.innerHTML = "Breve: Novas telas.\nClique "  + palpite + " para tela menu)";
+						else
+							stringTela.innerHTML = "Telas "+ (tela+1) + " a " + (tela+10) + " liberadas! \nClique " + palpite + " para continuar";				
+					}
+					else
+						stringTela.innerHTML = "Clique " + palpite + " para Tela " + (tela+1);
+					novaCor = 1;						
+			}	
+		}
+
+		function mostrarGameover(){
+			stringTela.innerHTML = "Acabaram seus palpites! \nClique " + segredo + " para tela menu";
+			stringPalpites.innerHTML = "Palpites: "  + chance;
+			novaCor = 1;
+		}
+		function mostrarDica(dica){
+			stringTela.innerHTML = "Tela "+ tela + " | O número é "+ dica;
+			stringPalpites.innerHTML = "Palpites: "  + chance;
+		}
+		
+		function mudarTela(){
+			switch (tela){			
+				case 1:			
+				document.body.style.backgroundImage = "url('https://64.media.tumblr.com/5e1494159e509c7fa483aabdd09a6b1b/b299dc9ad24e7f05-5a/s1280x1920/7ad22828e8e2de9b12ef5494c38888bfab21baca.jpg')";
+				break;	
+				case 2:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/e29bebe35a829247fd1eddbaaa9711f8/92f5ab8af6da2977-fc/s1280x1920/b7dae5b555a23c9e53daf3e26f5c24c5f3185771.pnj')";
+				break;
+				case 3:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/80114f60692e62430a7c144639e30807/b73eff7ccca93b1f-4d/s1280x1920/7498e141218bbd9fe33d608756c9914dcb76d1ac.jpg')";
+				break;
+				case 4:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/08f051afa1488a2edeaa0d3cb52d60da/f1a0b980ce5c445a-d4/s540x810/079f8c3836183fb3e5872b661ce74701b6f58921.jpg')";		
+				break;
+				case 5:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/5575de3355aefc823181959170af3647/cecd3b37ec6a10b6-a9/s640x960/e08b959e3d61bb2e9275d351ea07b290a8444f90.pnj')";
+				break;
+				case 6:	
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/532b04c0c7bed3b558d24385bf56c37e/b6ec8ea207e27531-d3/s640x960/0464691f9c626380dd2d0bf403a450ce1c808c9d.jpg')";
+				break;
+				case 7:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/a8dba0ec52df5a112cf1f05dd8411e04/33b3a730387c24b7-ea/s640x960/a24a6e3c5aead8bb703cc6556dd1cc0225af0666.jpg')";
+				break;
+				case 8:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/8fd99bd4f92cb035ce21f8e1c150ac29/7725542da9127c16-9e/s2048x3072/b2bda872c8e1dc2efd1e51f8815cdb0516009087.jpg')";
+				break;
+				case 9:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/86d45ad9fd6e87b3a24753f46cd403ea/7b9da56be82de548-f2/s1280x1920/5f02d84e8fd6b58efde4fb0baec29f1091118e2c.jpg')";
+				break;
+				case 10:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/78fc48d9a6e4e95d91120c25d28a2a4b/401ad50805d1a7df-dc/s1280x1920/3b8424bbcd94263e53da44ecdd4da55e2174ada9.jpg')";
+				break;
+				case 11:			
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/ce58a6a565a7c2027d7f730fc5782d48/88ef59f36fae150b-ac/s540x810/7eb9423a11170de8b846c4e6e20c8c100c9e2d00.jpg')";
+				break;	
+				case 12:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/15b936c1cdd39aa0aedc0e991878d4ad/05b3e857f07bcedc-ac/s540x810/1c5a0506873c9d1d9d7e2fecd8184fcdaa652f9f.jpg')";
+				break;
+				case 13:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/a3389566af826923a4a1b189dac8307e/baa39ec060d78a9e-2d/s1280x1920/b263b1b983c6147fde21797552fc71a3646e6ead.jpg')";
+				break;
+				case 14:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/15b936c1cdd39aa0aedc0e991878d4ad/05b3e857f07bcedc-ac/s540x810/1c5a0506873c9d1d9d7e2fecd8184fcdaa652f9f.jpg')";		
+				break;
+				case 15:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/f9d6b363732e0be411886a28babdf186/1c987d6152572d83-fc/s540x810/44687e73b4940778bd79684ab3364a89fcd62650.jpg')";
+				break;
+				case 16:
+				
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/6de54a1744cc5b48812eecef35b65695/a5ef5b3423cf3a0b-98/s540x810/6fc9172759f8e7132156f6cc6964755aaa51d2a9.pnj')";
+				break;
+				
+				case 17:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/1d3e85520a5be769586dad6cc0d90bc9/febda97dd9c9c668-3b/s540x810/3aac139f01460482d5b91f71f7f4effcf96a8fcf.pnj')";
+				break;
+				case 18:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/cb5e821cb15b4996414f79fc82592214/5cad46218a27fd47-29/s540x810/bc95432779a7f9c247f635065b89561e600724f1.pnj')";
+				break;
+				case 19:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/24616c624a20b05abf7ae2ff5147ada7/839a64f0a9ddb613-33/s540x810/62bd36659bdca69203640e67d1e77b5e3da624cc.jpg')";	
+				break;
+				case 20:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/d6c021b5e3c93981ea51911f7123732b/21d3789f8697d250-8f/s1280x1920/803cb69023f32512677375de65068daf2445c20d.jpg')";
+				break;
+				case 21:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/b3ec923f1cffff03e4512198d725999d/b93f793cc9893b3f-3f/s540x810/f90bb4b1e9157dea10ed95f328fe341b03f9e9ce.jpg')";
+				break;
+				case 22:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/b1271279f97f86bd803e20c95fcca994/2ae48e1f3a35db79-e1/s540x810/50ae1db5bf2dc2de17c318e73964837c031cbb12.pnj')";
+				break;
+				case 23:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/7d5c1b8481f5c94796c6da8c886940b6/e3f58070f9b91280-3b/s540x810/f5020eca886b43aeac57b1c53c8e7c39e9d7996a.pnj')";
+				break;
+				case 24:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/a349de9780c36abcb573b0a886f0205c/5eff28d4b1b5c245-50/s1280x1920/7270b1feb96fb99388a7ecfe1bc9edde18c1d2f6.jpg')";
+				break;
+				case 25:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/cf875e6294b4abc9287f18395d8743cc/46243e388e6221cf-3b/s500x750/95d001dc0f581f2c7e88f5e27bae97d4c75a5497.gifv')";
+				break;
+				case 26:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/aee4fd77633567b5f82e7528ef0c7208/d51bec4707543fa8-95/s400x600/2b194b8d9faf38ea4df0c5d0185d85fd9ad387d0.gifv')";
+				break;
+				case 27:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/058cb44d3eba73216bd3aecc3afb388f/0a93de2987c95c89-aa/s400x600/5e0295df8353ffbdac93f9517f51b474c878b5aa.jpg')";
+				break;
+				case 28:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/a87cb32a735bc1aa4b5d87dd10787ffc/4d4d3c3751ad2801-ae/s400x600/814bba57c74d5ae482c40976e532aaf11381dfea.jpg')";				
+				break;
+				case 29:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/e41c80e6192793e9660ebb8b0b53e706/5ebe8394c76b8c83-34/s400x600/2bd46d710a8a47246b6492de15c202c87134fdca.jpg')";
+				break;
+				case 30:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/40e803872ee633d9bab76fcadbb95a08/f18740df24e77a99-b9/s400x600/3843e8dec53e483b9fd86b2586aebd63dd4e02db.jpg')";		
+				break;
+				case 31:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/4cffc4bc28eebc8c371a94d56ff8fbd2/afe5008ff1180678-e7/s400x600/b5589624a54c9a126654058c4cbaf1e43e819f6c.jpg')";
+				break;
+				case 32:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/cb5bf677b22c7e919060c4cd22718744/ffc07ad65419f929-41/s400x600/9f62ef2bfd5325ff59bd15d307df980a16935a42.jpg')";
+				break;
+				case 33:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/6baee5af680d2f365ce67f00badfaa26/93d25eb17463b7a6-d0/s640x960/0cf53e4cae0f12197d495cbab7e72a63bf2f5ef1.jpg')";
+				break;
+				case 34:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/48fb079725eef267700e0bbab3a21eee/ba292dfe22b23650-65/s400x600/90ef7082b9f5915162ac10fd2d8b329ce1092156.jpg')";
+				break;
+				case 35:
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/db9d9337fe386fa2d37c4c4ca9265152/c9f7013628ddf153-43/s400x600/5cf63e5c3612bceeefc1677545cdf523c460c677.jpg')";
+				break;
+				case 36:
+				document.body.style.backgroundImage="url('https://i.pinimg.com/originals/ce/29/f7/ce29f75a516355a38f977f8365bc9d75.jpg')";
+				break;
+				case 37:
+				document.body.style.backgroundImage="url('https://i.pinimg.com/736x/15/40/76/154076ba672764a6efc11b0fefc8e4ad.jpg')";
+				break;
+				case 38:
+				document.body.style.backgroundImage="url('https://i.pinimg.com/236x/08/23/7a/08237a305ce6b911ca80d274b4c61bfa--dc-comic-comic-art.jpg')";
+				break;
+				case 39:
+				document.body.style.backgroundImage="url('https://static.hitek.fr/img/actualite/2015/06/w_b8311d818d3052145205fb1efe7ef0b2.jpg')";
+				break;
+				case 40:
+				document.body.style.backgroundImage="url('https://thumbs.dreamstime.com/b/f%C3%AAmea-sexy-no-traje-preto-da-mulher-gato-51067834.jpg')";
+				break;
+				case 41:
+				document.body.style.backgroundImage="url('https://legadodadc.com.br/wp-content/uploads/2022/04/cosplay-mulher-gato-3-legadodadc.jpg')";
+				break;
+				case 42:
+				document.body.style.backgroundImage="url('https://www.sideshow.com/wp/wp-content/uploads/2015/03/3002632_press02.jpg')";
+				break;
+				case 43:
+				document.body.style.backgroundImage="url('https://www.sideshow.com/cdn-cgi/image/quality=90,f=auto/https://www.sideshow.com/storage/product-images/3002632/classic-catwoman_dc-comics_gallery_5c4b8a8a6b848.jpg')";
+				break;
+				case 44:
+				document.body.style.backgroundImage="url('https://live.staticflickr.com/7655/16824860975_cdb55a0314_b.jpg')";
+				break;
+				case 45:
+				document.body.style.backgroundImage="url('https://d3ugyf2ht6aenh.cloudfront.net/stores/972/904/products/bdf26f450ce8846369f8a762a8fd9dddawsaccesskeyidakiatclmsgfx4j7tu445expires1677861169signaturegsrlxp48d2b5khxkimcemiqtdt2bo3d-4fb9eb622d88440c4a16752692557094-640-0.webp')";
+				break;
+				case 46:
+				document.body.style.backgroundImage="url('https://img.elo7.com.br/product/600x380/46E9441/quadro-poster-mulher-gato-catwaman-batman-com-moldura-sexy.jpg')";
+				break;
+				case 47:
+				document.body.style.backgroundImage="url('https://mundocosplayer.com.br/conteudo/uploads/2015/04/BUCHELE-COSPLAY-4.jpg')";
+				break;
+				case 48:
+				document.body.style.backgroundImage="url('https://images.tcdn.com.br/img/img_prod/676291/macacao_catsuit_fantasia_mulher_gato_festa_show_cosplay_preto_m179_179_1_d04e87509d1b24efc560261ac16014b3.jpg')";
+				break;
+				case 49:
+				document.body.style.backgroundImage="url('https://cinefreak.com.br/wp-content/uploads/2021/06/545EDEE2-E212-4FC6-8F4F-67C89B8B93E0.jpeg')";
+				break;
+				case 50:
+				document.body.style.backgroundImage="url('https://va.media.tumblr.com/tumblr_rv9dsxROnv1zwp1xo.mp4')";
+				break;
+			}
+		}
+</script>
+   
+</body>
+
+</html>
