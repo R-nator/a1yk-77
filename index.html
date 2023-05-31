@@ -167,7 +167,7 @@
  <script>
  		mostrarMenu();// e ocultar os números e informações de tela e chances	
 		function mostrarMenu(){		
-			document.body.style.backgroundImage = "url('https://64.media.tumblr.com/3641e6e25e89d9ffa6d751b82610d118/tumblr_mr0b2hGZ2C1sdxraao1_500.gifv')";		
+			document.body.style.backgroundImage = "url('https://64.media.tumblr.com/85b3857cca4ea3c1bf6087c610e43745/55112aed06d34f7a-fe/s2048x3072/879136c914451b60178d432ea981bb4e5ea3f36a.pnj')";		
 			document.getElementById("divTela").style.display = 'none';
 			document.getElementById("divMenu").style.display = 'block';
 			document.getElementById("divBotões").style.display = 'none';
@@ -309,13 +309,16 @@
 			else if(palpite == segredo){	
 					arrayBotões[palpite-1].classList.add("segredo");
 					if (tela%10 == 0){
-						if (tela == 50)
-							stringTela.innerHTML = "Parabéns! Você finalizou todas as telas.\nClique "  + palpite + " para tela menu";
+						if (tela == 50){
+							createLink();
+							stringTela.innerHTML = "Clique "  + palpite + " para telas 1 a 50\nPara avançar para as telas 51 a 100 clique no link abaixo";
+						}
 						else
 							stringTela.innerHTML = "Telas "+ (tela+1) + " a " + (tela+10) + " liberadas! \nClique " + palpite + " para continuar";				
 					}
 					else
 						stringTela.innerHTML = "Clique " + palpite + " para Tela " + (tela+1);
+						
 					novaCor = 1;						
 			}	
 		}
@@ -329,6 +332,15 @@
 			stringTela.innerHTML = "Tela "+ tela + " | O número é "+ dica;
 			stringPalpites.innerHTML = "Palpites: "  + chance;
 		}
+		
+	function createLink() {
+    let anchor = document.createElement('a');
+    let link = document.createTextNode("TELAS 51 a 100 LIBERADAS");
+    anchor.appendChild(link);
+    anchor.href = "https://r-nator.github.io/album/51cem.html";
+    document.body.appendChild(anchor);
+}
+
 		
 
 		function mudarTela(){
