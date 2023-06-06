@@ -183,7 +183,7 @@
 			tela = escolha;
 			mudarTela();
 			//document.body.style.backgroundImage = "url(img/" + tela + ".jpg)";	
-			chance = 10;
+			chance = 8;
 			stringTela = document.getElementById("divTela");
 			stringTela.innerHTML = "Tela " + tela;
 			stringPalpites = document.getElementById("divPalpites");
@@ -241,7 +241,7 @@
 						tela++;
 						mudarTela();
 					}
-					chance=chance+4;			
+					chance=chance+3;			
 					stringTela.innerHTML = "Tela "+ tela ;
 					stringPalpites.innerHTML = "Palpites: "  + chance;
 					terminou = 0;
