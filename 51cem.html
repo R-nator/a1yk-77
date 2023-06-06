@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,16 +15,14 @@
 		h1 {font-family: "Lucida Console", "Courier New", monospace;
 			font-size:32px;	
   			color: rgb(240, 19, 3);
-			  text-align: center;
-			
+			text-align: center;		
 		}
-		h2 {	font-family: "Lucida Console", "Courier New", monospace;		
+		h2 {	
+			font-family: "Lucida Console", "Courier New", monospace;		
 			font-size:22px;	
   			color: #f93;
 			text-align: center;
-			}
-		
-			
+			}			
 		#divTela {
 			background:  rgb(2, 2, 80);
 			max-width: 344px;
@@ -33,18 +30,15 @@
   			font-size:22px;	
   			color: #fff;
 		}
-		#divMenu{
-			
-			/*background: rgb(1, 83, 1) ;
-			color: #f0f;
-			background-image: url('1.gif');	*/		
+		#divMenu{	
 			max-width: 400px;
 		}
 		#divBotões 
 		{ 
 			max-width: 400px;
 		}
-		#divPalpites {	background:  rgb(71, 0, 0) ;
+		#divPalpites {	
+			background:  rgb(71, 0, 0) ;
 			max-width: 344px;
   			font-family: "Lucida Console", "Courier New", monospace;
   			font-size:22px;	
@@ -56,23 +50,18 @@
 			height: 35px;
 			font-size: 28px;
 			color: #f40;
-			margin: 20px 80px;
-			/*white-space: normal;*/
-			/*display: inline-block;*/
-			
+			margin: 20px 80px;			
 		}
 		.botão {
 			width: 54px;
 			height: 48px;
 			font-size: 24px;
 			margin: 2px 0px;
-			/*white-space: normal;*/
 			display: inline-block;
 		}	
 		.gameover {
 			background-color: red;		
 			color: rgb(255, 255, 255);
-
 		}
 		.segredo {
 			background-color: rgb(238, 255, 0);
@@ -83,22 +72,19 @@
 		.transparente {
 			opacity: 0;
 		}
-  </style>
+</style>
 </head>
-
 <body>
-
- <div id="divTela">		
-	</div>
-	
+<div id="divTela">		
+</div>
 <div id="divMenu">
 <h1>Album2</h1>
 <h2>Sets</h2>
-		<button class="tema" id="bot1" onclick="escolherTema(1)">51 a 60</button>
-		<button class="tema" id="bot2" onclick="escolherTema(11)">61 a 70</button>
-		<button class="tema" id="bot3" onclick="escolherTema(21)">71 a 80</button>
-		<button class="tema" id="bot4" onclick="escolherTema(31)">81 a 90</button>
-		<button class="tema" id="bot5" onclick="escolherTema(41)">91 a 100</button>
+		<button class="tema" id="bot1" onclick="escolherTema(51)">51 a 60</button>
+		<button class="tema" id="bot2" onclick="escolherTema(61)">61 a 70</button>
+		<button class="tema" id="bot3" onclick="escolherTema(71)">71 a 80</button>
+		<button class="tema" id="bot4" onclick="escolherTema(81)">81 a 90</button>
+		<button class="tema" id="bot5" onclick="escolherTema(91)">91 a 100</button>
 </div>
 	<div id="divBotões">
 		<button class="botão" value="1">1</button>
@@ -162,10 +148,10 @@
 		<button class="botão" value="59">59</button>
 		<button class="botão" value="60">60</button>
 	</div>
-	 <div id="divPalpites">		
+	<div id="divPalpites">		
 	</div>
  <script>
- 		mostrarMenu();// e ocultar os números e informações de tela e chances	
+ 		mostrarMenu();	
 		function mostrarMenu(){		
 			document.body.style.backgroundImage = "url('https://64.media.tumblr.com/06db606ff376258d94317bc8aa4e419b/f33d8df1d25c4010-4c/s2048x3072/c51454f57b4dececad5f52b07d0f60a9e4092fb4.jpg')";		
 			document.getElementById("divTela").style.display = 'none';
@@ -173,8 +159,6 @@
 			document.getElementById("divBotões").style.display = 'none';
 			document.getElementById("divPalpites").style.display = 'none';	
 		}
-		
-		//desabilitar os botões de algumas "Telas" no início
 		document.getElementById("bot2").disabled = true;
 		document.getElementById("bot3").disabled = true;
 		document.getElementById("bot4").disabled = true;
@@ -182,39 +166,30 @@
 		function escolherTema(escolha){	
 			tela = escolha;
 			mudarTela();
-			//document.body.style.backgroundImage = "url(img/" + tela + ".jpg)";	
-			chance = 10;
+			chance = 8;
 			stringTela = document.getElementById("divTela");
 			stringTela.innerHTML = "Tela " + tela;
 			stringPalpites = document.getElementById("divPalpites");
 			stringPalpites.innerHTML = "Palpites: "  + chance;
-			mostrarTelaNumerosChances()	;// e ocultar os menus
-		
-		}
-		
+			mostrarTelaNumerosChances();		
+		}		
 		function mostrarTelaNumerosChances() {
 			document.getElementById("divTela").style.display = 'block';
 			document.getElementById("divMenu").style.display = 'none';
 			document.getElementById("divBotões").style.display = 'block';
 			document.getElementById("divPalpites").style.display = 'block';	
 		}
-
-		let novaCor = 0; //para botoes VERMELHO/AMARELO
-		let terminou = 0; //a tela ou as chances
+		let novaCor = 0;
+		let terminou = 0;
 		let ativos = [];
 		let arrayBotões = document.getElementsByClassName("botão");
-
 		registrarAtivos();
 		function registrarAtivos(){
 			for (let i = 0; i <  arrayBotões.length;  i++){
 				ativos[i] = i+1;
 			}
 		}
-
 		let segredo = Math.floor(Math.random()*arrayBotões.length) + 1;		
-		//
- 		console.log("segredo=",segredo);
-		//let palpite;
 		for (let i = 0; i < arrayBotões.length; i++) {			
 			arrayBotões[i].addEventListener("click", function() {			
 				if (terminou){
@@ -225,16 +200,14 @@
 						arrayBotões[segredo-1].classList.remove("segredo");				
 					}					
 					else if (tela%10 == 0){								
-						if(tela == 10)
+						if(tela == 60)
 							document.getElementById("bot2").disabled = false;
-						else if(tela == 20)
+						else if(tela == 70)
 							document.getElementById("bot3").disabled = false;
-						else if(tela == 30)
+						else if(tela == 80)
 							document.getElementById("bot4").disabled = false;
-						else if(tela == 40)
+						else if(tela == 90)
 							document.getElementById("bot5").disabled = false;
-						else if(tela == 50)						
-							document.body.style.backgroundImage = "url(img/53.jpg)";
 						mostrarMenu();										
 					}
 					else {
@@ -275,14 +248,12 @@
 			}
 			novaCor=0;
 		}
-
 		function ativar() {
 			for (let i = 0; i < arrayBotões.length; i++) {	
 				arrayBotões[i].disabled=false;
 				arrayBotões[i].classList.remove("transparente");		
 			}			
 		}
-
 		function comparar(palpite){					
 			if(palpite < segredo){
 				chance--;
@@ -291,7 +262,6 @@
 				else 
 					mostrarDica(">");
 				var index = ativos.indexOf(palpite);
-				//remove do início até a posição do palpite
 				ativos.splice(0,index+1);								
 			}
 			else if(palpite > segredo){
@@ -301,13 +271,12 @@
 				else 
 					mostrarDica("<");
 				var index = ativos.indexOf(palpite);
-				//remove da posição do palpite até o final
 				ativos.splice(index);					
 			}	
 			else if(palpite == segredo){	
 					arrayBotões[palpite-1].classList.add("segredo");
 					if (tela%10 == 0){
-						if (tela == 50){
+						if (tela == 100){
 							createLink();
 							stringTela.innerHTML = "Clique "  + palpite + " para telas 51 a 100\nPara avançar para as telas 101 a 150 clique no link abaixo";
 						}
@@ -319,7 +288,6 @@
 					novaCor = 1;						
 			}	
 		}
-
 		function mostrarGameover(){
 			stringTela.innerHTML = "Acabaram seus palpites! \nClique " + segredo + " para tela menu";
 			stringPalpites.innerHTML = "Palpites: "  + chance;
@@ -329,13 +297,13 @@
 			stringTela.innerHTML = "Tela "+ tela + " | O número é "+ dica;
 			stringPalpites.innerHTML = "Palpites: "  + chance;
 		}
-	function createLink() {
-    let anchor = document.createElement('a');
-    let link = document.createTextNode("TELAS 101 a 150 LIBERADAS");
-    anchor.appendChild(link);
-    anchor.href = "https://r-nator.github.io/album/cen150.html";
-    document.body.appendChild(anchor);
-}		
+		function createLink() {
+			let anchor = document.createElement('a');
+			let link = document.createTextNode("TELAS 101 a 150 LIBERADAS");
+			anchor.appendChild(link);
+			anchor.href = "https://r-nator.github.io/album/cen150.html";
+			document.body.appendChild(anchor);
+		}		
 		function mudarTela(){
 			switch (tela){			
 				case 1:			
@@ -490,8 +458,6 @@
 				break;
 			}
 		}
-</script>
-   
+</script>   
 </body>
-
 </html>
