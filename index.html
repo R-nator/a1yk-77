@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,15 +15,14 @@
 		h1 {font-family: "Lucida Console", "Courier New", monospace;
 			font-size:32px;	
   			color: rgb(240, 19, 3);
-			  text-align: center;
-			
+			  text-align: center;			
 		}
-		h2 {	font-family: "Lucida Console", "Courier New", monospace;		
+		h2 {	
+			font-family: "Lucida Console", "Courier New", monospace;		
 			font-size:22px;	
   			color: #f93;
 			text-align: center;
-			}
-		
+		}		
 			
 		#divTela {
 			background:  rgb(2, 2, 80);
@@ -33,15 +31,10 @@
   			font-size:22px;	
   			color: #fff;
 		}
-		#divMenu{
-			
-			/*background: rgb(1, 83, 1) ;
-			color: #f0f;
-			background-image: url('1.gif');	*/		
+		#divMenu {	
 			max-width: 400px;
 		}
-		#divBotões 
-		{ 
+		#divBotões	{ 
 			max-width: 400px;
 		}
 		#divPalpites {	background:  rgb(71, 0, 0) ;
@@ -56,23 +49,18 @@
 			height: 35px;
 			font-size: 28px;
 			color: #f40;
-			margin: 20px 80px;
-			/*white-space: normal;*/
-			/*display: inline-block;*/
-			
+			margin: 20px 80px;			
 		}
 		.botão {
 			width: 54px;
 			height: 48px;
 			font-size: 24px;
 			margin: 2px 0px;
-			/*white-space: normal;*/
 			display: inline-block;
 		}	
 		.gameover {
 			background-color: red;		
 			color: rgb(255, 255, 255);
-
 		}
 		.segredo {
 			background-color: rgb(238, 255, 0);
@@ -83,14 +71,11 @@
 		.transparente {
 			opacity: 0;
 		}
-  </style>
+ </style>
 </head>
-
 <body>
-
- <div id="divTela">		
-	</div>
-	
+<div id="divTela">		
+</div>	
 <div id="divMenu">
 <h1>Album</h1>
 <h2>Sets</h2>
@@ -165,16 +150,14 @@
 	 <div id="divPalpites">		
 	</div>
  <script>
- 		mostrarMenu();// e ocultar os números e informações de tela e chances	
+ 		mostrarMenu();
 		function mostrarMenu(){		
 			document.body.style.backgroundImage = "url('https://64.media.tumblr.com/85b3857cca4ea3c1bf6087c610e43745/55112aed06d34f7a-fe/s2048x3072/879136c914451b60178d432ea981bb4e5ea3f36a.pnj')";		
 			document.getElementById("divTela").style.display = 'none';
 			document.getElementById("divMenu").style.display = 'block';
 			document.getElementById("divBotões").style.display = 'none';
 			document.getElementById("divPalpites").style.display = 'none';	
-		}
-		
-		//desabilitar os botões de algumas "Telas" no início
+		}		
 		document.getElementById("bot2").disabled = true;
 		document.getElementById("bot3").disabled = true;
 		document.getElementById("bot4").disabled = true;
@@ -182,39 +165,33 @@
 		function escolherTema(escolha){	
 			tela = escolha;
 			mudarTela();
-			//document.body.style.backgroundImage = "url(img/" + tela + ".jpg)";	
-			chance = 8;
+			chance = 5;
 			stringTela = document.getElementById("divTela");
 			stringTela.innerHTML = "Tela " + tela;
 			stringPalpites = document.getElementById("divPalpites");
 			stringPalpites.innerHTML = "Palpites: "  + chance;
-			mostrarTelaNumerosChances()	;// e ocultar os menus
-		
-		}
-		
+			mostrarTelaNumerosChances()	;		
+		}		
 		function mostrarTelaNumerosChances() {
 			document.getElementById("divTela").style.display = 'block';
 			document.getElementById("divMenu").style.display = 'none';
 			document.getElementById("divBotões").style.display = 'block';
 			document.getElementById("divPalpites").style.display = 'block';	
 		}
-
-		let novaCor = 0; //para botoes VERMELHO/AMARELO
-		let terminou = 0; //a tela ou as chances
+		let cheat = 0;
+		let bonus = 2;
+		let novaCor = 0;
+		let terminou = 0;
 		let ativos = [];
 		let arrayBotões = document.getElementsByClassName("botão");
-
 		registrarAtivos();
 		function registrarAtivos(){
 			for (let i = 0; i <  arrayBotões.length;  i++){
 				ativos[i] = i+1;
 			}
 		}
-
 		let segredo = Math.floor(Math.random()*arrayBotões.length) + 1;		
-		//
- 		console.log("segredo=",segredo);
-		//let palpite;
+		//console.log("segredo=",segredo);
 		for (let i = 0; i < arrayBotões.length; i++) {			
 			arrayBotões[i].addEventListener("click", function() {			
 				if (terminou){
@@ -233,27 +210,38 @@
 							document.getElementById("bot4").disabled = false;
 						else if(tela == 40)
 							document.getElementById("bot5").disabled = false;
-						else if(tela == 50)						
-							document.body.style.backgroundImage = "url(img/53.jpg)";
-						mostrarMenu();										
+						mostrarMenu();								
 					}
 					else {
 						tela++;
 						mudarTela();
 					}
-					chance=chance+3;			
+					chance=chance+bonus;			
 					stringTela.innerHTML = "Tela "+ tela ;
 					stringPalpites.innerHTML = "Palpites: "  + chance;
 					terminou = 0;
 					arrayBotões[palpite-1].classList.remove("segredo");
 					segredo = Math.floor(Math.random()*arrayBotões.length) + 1;
-					//
-					console.log("segredo=",segredo);
+					//console.log("segredo=",segredo);					
 					ativar();
 					registrarAtivos();
 				}
 				else{				
 					palpite = parseInt(this.value);
+					if (palpite == 3 && cheat == 0){
+						cheat=1;
+					}else if (palpite == 58 && cheat == 1){
+						cheat=2;
+					}else if (palpite == 5 && cheat == 2){
+						cheat=3;
+					}else if (palpite == 56 && cheat == 3){
+						tela = 10;
+						bonus = 5;
+						palpite=segredo;	
+					}else{
+						cheat=0;
+					}
+					//console.log("cheat=",cheat);
 					comparar(palpite);
 					desativar();
 				}							
@@ -277,15 +265,13 @@
 			}
 			novaCor=0;
 		}
-
 		function ativar() {
 			for (let i = 0; i < arrayBotões.length; i++) {	
 				arrayBotões[i].disabled=false;
 				arrayBotões[i].classList.remove("transparente");		
 			}			
 		}
-
-		function comparar(palpite){					
+		function comparar(palpite){	
 			if(palpite < segredo){
 				chance--;
 				if (chance == 0)
@@ -293,7 +279,6 @@
 				else 
 					mostrarDica(">");
 				var index = ativos.indexOf(palpite);
-				//remove do início até a posição do palpite
 				ativos.splice(0,index+1);								
 			}
 			else if(palpite > segredo){
@@ -303,7 +288,6 @@
 				else 
 					mostrarDica("<");
 				var index = ativos.indexOf(palpite);
-				//remove da posição do palpite até o final
 				ativos.splice(index);					
 			}	
 			else if(palpite == segredo){	
@@ -318,11 +302,9 @@
 					}
 					else
 						stringTela.innerHTML = "Clique " + palpite + " para Tela " + (tela+1);
-						
 					novaCor = 1;						
 			}	
 		}
-
 		function mostrarGameover(){
 			stringTela.innerHTML = "Acabaram seus palpites! \nClique " + segredo + " para tela menu";
 			stringPalpites.innerHTML = "Palpites: "  + chance;
@@ -331,18 +313,14 @@
 		function mostrarDica(dica){
 			stringTela.innerHTML = "Tela "+ tela + " | O número é "+ dica;
 			stringPalpites.innerHTML = "Palpites: "  + chance;
-		}
-		
-	function createLink() {
-    let anchor = document.createElement('a');
-    let link = document.createTextNode("TELAS 51 a 100 LIBERADAS");
-    anchor.appendChild(link);
-    anchor.href = "https://r-nator.github.io/album/51cem.html";
-    document.body.appendChild(anchor);
-}
-
-		
-
+		}		
+		function createLink() {
+			let anchor = document.createElement('a');
+			let link = document.createTextNode("TELAS 51 a 100 LIBERADAS");
+			anchor.appendChild(link);
+			anchor.href = "https://r-nator.github.io/album/51cem.html";
+			document.body.appendChild(anchor);
+		}		
 		function mudarTela(){
 			switch (tela){			
 				case 1:			
@@ -390,11 +368,9 @@
 				case 15:
 				document.body.style.backgroundImage="url('https://64.media.tumblr.com/42ff62506c21aac0b308d414772e3039/f6cc91433b3837d5-67/s540x810/67db752bf779576be6acaa2c037e60df93cece14.jpg')";
 				break;
-				case 16:
-				
+				case 16:				
 				document.body.style.backgroundImage="url('https://64.media.tumblr.com/e784fded56af23ecf02a0fe7213aaa4e/012200b31cb83ba6-15/s540x810/1e359f767d1a2c07df0b1b82678cd0e8b6ec5442.jpg')";
-				break;
-				
+				break;				
 				case 17:
 				document.body.style.backgroundImage="url('https://64.media.tumblr.com/78374e02831cc5a5b594c5a4fd674c2b/315bba17771f5667-b0/s540x810/2b5cc486d425f4b61198ffe31d9ae95029eb8bda.jpg')";
 				break;
@@ -499,8 +475,6 @@
 				break;
 			}
 		}
-</script>
-   
+</script> 
 </body>
-
 </html>
