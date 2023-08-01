@@ -178,6 +178,8 @@
 			document.getElementById("divBotões").style.display = 'block';
 			document.getElementById("divPalpites").style.display = 'block';	
 		}
+		let cheat = 0;
+		let bonus = 2;
 		let novaCor = 0;
 		let terminou = 0;
 		let ativos = [];
@@ -213,7 +215,7 @@
 						tela++;
 						mudarTela();
 					}
-					chance=chance+5;			
+					chance=chance+bonus;			
 					stringTela.innerHTML = "Tela "+ tela ;
 					stringPalpites.innerHTML = "Palpites: "  + chance;
 					terminou = 0;
@@ -224,6 +226,19 @@
 				}
 				else{				
 					palpite = parseInt(this.value);
+					if (palpite == 3 && cheat == 0){
+						cheat=1;
+					}else if (palpite == 58 && cheat == 1){
+						cheat=2;
+					}else if (palpite == 5 && cheat == 2){
+						cheat=3;
+					}else if (palpite == 56 && cheat == 3){
+						tela = 160;
+						bonus = 5;
+						palpite=segredo;	
+					}else{
+						cheat=0;
+					}
 					comparar(palpite);
 					desativar();
 				}							
@@ -306,94 +321,94 @@
 		function mudarTela(){
 			switch (tela){			
 				case 151:			
-				document.body.style.backgroundImage = "url('https://www.torrentdosfilmeshd1.net/wp-content/uploads/wordpress-popular-posts/212390-first_image-342x513.jpg')";
+				document.body.style.backgroundImage = "url('https://64.media.tumblr.com/6003f7392c5123b6e12f1ce0618d8a57/b968cc85a3f6db0e-e3/s1280x1920/7fd52529805058d0e680e7f811576e27f5c53217.pnj')";
 				break;	
 				case 152:
-				document.body.style.backgroundImage="url('https://cdnb.artstation.com/p/assets/images/images/021/862/863/large/cover-girl-vestidas.jpg?1573220192')";
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/9f7231be36f3a90c95174adcee324105/b968cc85a3f6db0e-19/s1280x1920/1da34463b4d0ec032b207cef470810cd9984f37f.pnj')";
 				break;
 				case 153:
-				document.body.style.backgroundImage="url('https://cdnb.artstation.com/p/assets/images/images/026/337/555/large/lena-dai-1a.jpg?1588517322')";
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/0e70291002e68da2d0f4ac3bfa8a1d1c/b968cc85a3f6db0e-78/s1280x1920/830d00017010b928b2b8c73363f4d2d58e078e3b.pnj')";
 				break;
 				case 154:
-				document.body.style.backgroundImage="url('https://i.pinimg.com/474x/02/b8/88/02b888431aaa7cff5cfe3a43df3a7312--nurse-cartoon-cartoon-art.jpg')";		
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/8299b67adca136541074bfc455ea8828/b968cc85a3f6db0e-a4/s1280x1920/460ec60309d656b24b4ffbb45373953afde62055.pnj')";		
 				break;
 				case 155:
-				document.body.style.backgroundImage="url('https://i.pinimg.com/736x/83/92/6c/83926cf197c7a06b2c5f792857aba643--thundercats-universe.jpg')";
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/67389cb26705b3907c996f80c0071469/b968cc85a3f6db0e-3f/s1280x1920/b4091876f739e8eec70bd08d02042f4d3debee94.pnj')";
 				break;
 				case 156:	
-				document.body.style.backgroundImage="url('https://www.deviantart.com/nerdysiren/art/Cheetara-Thundercats-Cosplay-Costume-647222525')";
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/2fd5c819718254c11901da57748f72d1/b968cc85a3f6db0e-6a/s1280x1920/4e1b17131d7d75f88cc21f2882fb5a2027f8945c.pnj')";
 				break;
 				case 157:
-				document.body.style.backgroundImage="url('https://www.deviantart.com/kakapunkcool/art/Wonder-Woman-743336491')";
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/0ae400d8c401340e76895e9b81464dd5/b968cc85a3f6db0e-cc/s1280x1920/1fcfe661417c924a4c82dece9f11b3cf177d0aa7.pnj')";
 				break;
 				case 158:
-				document.body.style.backgroundImage="url('https://www.deviantart.com/nerdysiren/art/Gabrielle-Xena-Cosplay-Costume-776325313')";
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/8e9867a15e8405b0086bb8d526ff38f3/b968cc85a3f6db0e-b8/s1280x1920/5cc79b22f50c10e7ed8cb92cdbab28def6cfcf82.pnj')";
 				break;
 				case 159:
-				document.body.style.backgroundImage="url('https://www.deviantart.com/nerdysiren/art/Gabrielle-Xena-Cosplay-Costume-776325313')";
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/deee4d0dc88b3f12cc9c55b2bc7a2707/ea1c59ab2242365e-4c/s2048x3072/fd9f57e0c92412c3263e5f6647accf5a819dc30e.jpg')";
 				break;
 				case 160:
-				document.body.style.backgroundImage="url('https://www.deviantart.com/nerdysiren/art/Gabrielle-Xena-Cosplay-Costume-776543760')";
-				break;
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/680a8ecc1434638c7372c895b425f98b/ea1c59ab2242365e-5b/s2048x3072/378cbd9cd5abb0ce742002568279e3e4ff3e48d9.jpg')";
+				break;	
 				case 161:			
-				document.body.style.backgroundImage="url('https://www.deviantart.com/nerdysiren/art/Queen-Maeve-The-Boys-Cosplay-850404725')";
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/e88ea7a7f568c93d7401282a880a69e7/741c97cbf352aa47-c1/s540x810/51d95b9e6ef9a518e8c55a37de1b6efaa0155581.pnj')";
 				break;	
 				case 162:
-				document.body.style.backgroundImage="url('https://www.deviantart.com/supergirlfanatic99/art/Supergirl-939592304')";
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/380242c33a9f9db65759a594c90d6e14/fb203f867fedb9fa-ac/s1280x1920/ebe877be48e95a7a781c88c9bd76b08aa0ecba82.pnj')";
 				break;
 				case 163:
-				document.body.style.backgroundImage="url('https://www.deviantart.com/supergirlfanatic99/art/Hot-Wonder-Woman-958645394')";
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/325829077774686f6b604f7fae962de8/d709b696c374ac50-d6/s2048x3072/ef5a111695528a955b726dbeca27fa619013be8a.pnj')";
 				break;
 				case 164:
-				document.body.style.backgroundImage="url('https://www.deviantart.com/supergirlfanatic99/art/Version-15-957406009')";		
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/24134781698452f4843da73009766dcd/0e92f9578e41fe12-84/s2048x3072/6a89f4241b04b8eecbac8b914af3df6417e0b647.pnj')";		
 				break;
 				case 165:
-				document.body.style.backgroundImage="url('https://www.deviantart.com/supergirlfanatic99/art/Ode-to-Captain-America-957214115')";
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/60de7d3d94515810b501a179643ea933/5dc47554601da8c0-4b/s1280x1920/bca5a8549ff2a267a2529bfd92d1cdcf04d638d3.jpg')";
 				break;
 				case 166:			
-				document.body.style.backgroundImage="url('https://www.deviantart.com/supergirlfanatic99/art/Surprised-952301189')";
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/e33f2e56feaea70295303f3170721523/8b5216066b0130f0-36/s1280x1920/291b839377740e4765823086ab617167840ea63a.jpg')";
 				break;				
 				case 167:
-				document.body.style.backgroundImage="url('https://www.deviantart.com/supergirlfanatic99/art/Supergirl-958645397')";
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/ee4505a5fdf34073db51e6d09277d088/18d7660c822cef89-08/s500x750/13b6d1163fd1ce24f7844f1cab8235aa62ddf469.jpg')";
 				break;
 				case 168:
-				document.body.style.backgroundImage="url('https://www.deviantart.com/rdigitalartist/art/Supergirl-952910892')";
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/32640ceaad447657070ac0249123935d/1597b5cf539f021c-85/s540x810/185295a55c0c771f68cc88376c504840eb419055.pnj')";
 				break;
 				case 169:
-				document.body.style.backgroundImage="url('https://www.deviantart.com/jeffach/art/Wonder-Woman-New-52-Relaunch-Costume-278381571')";	
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/662187789e734da9bd8f920541724c57/47c2b6480e928253-35/s540x810/0c98b6e0db01d9743513fbcc8936721ff2ce6b4f.pnj')";	
 				break;
 				case 170:
-				document.body.style.backgroundImage="url('https://www.deviantart.com/jeffach/art/Wonder-Woman-318122254')";
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/7b622f64282865f5b4c25fbf2a9728c9/0e92f9578e41fe12-40/s2048x3072/d72d9e6e446443a6ff54d2576970bfebda1d6482.pnj')";
 				break;
 				case 171:
-				document.body.style.backgroundImage="url('https://www.deviantart.com/jeffach/art/Power-Girl-Commission-388019925')";
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/fc77de6c902fa1540d46a2d27521d34a/855dd3c97c51dc05-2f/s2048x3072/5292b5b949412cb3290cb4674299e7967ead43f0.pnj')";
 				break;
-				case 172:
-				document.body.style.backgroundImage="url('https://www.deviantart.com/jeffach/art/Supergirl-6-389344954')";
-				break;
+				case 172:			
+				document.body.style.backgroundImage = "url('https://www.torrentdosfilmeshd1.net/wp-content/uploads/wordpress-popular-posts/212390-first_image-342x513.jpg')";
+				break;	
 				case 173:
-				document.body.style.backgroundImage="url('https://www.deviantart.com/niacus/art/Ai-SD-749-959012229')";
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/6832fa065b5f68a2396376d046d71052/981749372f4fa026-47/s640x960/28a09832be11e239cef160aba32cd24d8e7b25c2.jpg')";
 				break;
 				case 174:
-				document.body.style.backgroundImage="url('https://www.deviantart.com/niacus/art/Ai-SD-226-958401358')";
+				document.body.style.backgroundImage="url('https://cdnb.artstation.com/p/assets/images/images/026/337/555/large/lena-dai-1a.jpg?1588517322')";
 				break;
 				case 175:
-				document.body.style.backgroundImage="url('https://www.deviantart.com/niacus/art/Ai-SD-484-958724416')";
+				document.body.style.backgroundImage="url('https://i.pinimg.com/474x/02/b8/88/02b888431aaa7cff5cfe3a43df3a7312--nurse-cartoon-cartoon-art.jpg')";		
 				break;
-				case 176:
-				document.body.style.backgroundImage="url('https://www.deviantart.com/rdigitalartist/art/Shazam-952909061')";
+				case 176:	
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/fdd2a8887707b560cfd60caa590f6350/b8b3b9c537925562-e1/s1280x1920/494890848f93e3d889c4a7fda326a9c679955824.pnj')";
 				break;
 				case 177:
-				document.body.style.backgroundImage="url('https://www.deviantart.com/rdigitalartist/art/Supergirl-955713450')";
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/76b6673835e8f9c193a24c6c20ea5df0/6b7a3b26c73efd9f-8b/s540x810/d7469fefe280df932bc034e1a76d39065e27d749.pnj')";
 				break;
 				case 178:
-				document.body.style.backgroundImage="url('https://www.deviantart.com/langel-lightl/art/Supergirl-951478654')";				
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/3c2ed5c6e2a36fdd114cd669faa96ba3/fe62ea55a869dda2-83/s540x810/f6ed7c208ddedfbb63e644329482ba59de57eb4d.pnj')";
 				break;
 				case 179:
-				document.body.style.backgroundImage="url('https://www.deviantart.com/langel-lightl/art/Supergirl-951478664')";
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/a7adf02fee87b0168c00b32cd6b80b80/dd128643a4c76064-52/s540x810/41313eb064ac642ea6297e9bd4cf91618652b072.pnj')";
 				break;
 				case 180:
-				document.body.style.backgroundImage="url('https://www.deviantart.com/vznnry/art/Annie-Variation-958476628')";		
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/94e58aa764ca565a4cda3b5c58496b6a/b33d36392198ac3f-5e/s540x810/4028c81220498df1f1c1a442d958e2b12fda3998.pnj')";
 				break;
 				case 181:
 				document.body.style.backgroundImage="url('https://i.pinimg.com/736x/c0/d7/b9/c0d7b9ea778542fbd46d58d9d550d646.jpg')";
