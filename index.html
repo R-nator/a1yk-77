@@ -156,7 +156,7 @@
 			document.getElementById("divTela").style.display = 'none';
 			document.getElementById("divMenu").style.display = 'block';
 			document.getElementById("divBotões").style.display = 'none';
-			document.getElementById("divPalpites").style.display = 'none';	
+			//document.getElementById("divPalpites").style.display = 'none';	
 		}		
 		document.getElementById("bot2").disabled = true;
 		document.getElementById("bot3").disabled = true;
@@ -167,16 +167,16 @@
 			mudarTela();
 			chance = 5;
 			stringTela = document.getElementById("divTela");
-			stringTela.innerHTML = "Tela " + tela;
-			stringPalpites = document.getElementById("divPalpites");
-			stringPalpites.innerHTML = "Palpites: "  + chance;
+			stringTela.innerHTML = `Tela ${tela} - ${chance} chances`;
+			//stringPalpites = document.getElementById("divPalpites");
+			//stringPalpites.innerHTML = "Palpites: "  + chance;
 			mostrarTelaNumerosChances()	;		
 		}		
 		function mostrarTelaNumerosChances() {
 			document.getElementById("divTela").style.display = 'block';
 			document.getElementById("divMenu").style.display = 'none';
 			document.getElementById("divBotões").style.display = 'block';
-			document.getElementById("divPalpites").style.display = 'block';	
+			//document.getElementById("divPalpites").style.display = 'block';	
 		}
 		let cheat = 0;
 		let bonus = 2;
@@ -217,8 +217,8 @@
 						mudarTela();
 					}
 					chance=chance+bonus;			
-					stringTela.innerHTML = "Tela "+ tela ;
-					stringPalpites.innerHTML = "Palpites: "  + chance;
+					stringTela.innerHTML =`Tela ${tela} - ${chance} chances`;
+					//stringPalpites.innerHTML = "Palpites: "  + chance;
 					terminou = 0;
 					arrayBotões[palpite-1].classList.remove("segredo");
 					segredo = Math.floor(Math.random()*arrayBotões.length) + 1;
@@ -272,25 +272,7 @@
 			}			
 		}
 		function comparar(palpite){	
-			if(palpite < segredo){
-				chance--;
-				if (chance == 0)
-					mostrarGameover();				
-				else 
-					mostrarDica(">");
-				var index = ativos.indexOf(palpite);
-				ativos.splice(0,index+1);								
-			}
-			else if(palpite > segredo){
-				chance--;
-				if (chance == 0)
-					mostrarGameover();
-				else 
-					mostrarDica("<");
-				var index = ativos.indexOf(palpite);
-				ativos.splice(index);					
-			}	
-			else if(palpite == segredo){	
+			if(palpite == segredo){	
 					arrayBotões[palpite-1].classList.add("segredo");
 					if (tela%10 == 0){
 						if (tela == 50){
@@ -303,17 +285,27 @@
 					else
 						stringTela.innerHTML = "Clique " + palpite + " para Tela " + (tela+1);
 					novaCor = 1;						
-			}	
+			}	else {
+					if(palpite < segredo){	
+						var index = ativos.indexOf(palpite);
+						ativos.splice(0,index+1);								
+					}
+					if(palpite > segredo){
+						var index = ativos.indexOf(palpite);
+						ativos.splice(index);
+					}
+					chance--;
+					if (chance == 0){
+						stringTela.innerHTML = "Clique " + segredo + " para tela menu";
+						novaCor = 1;
+					}
+					else if (chance == 1)
+						stringTela.innerHTML = `Tela ${tela} - última chance`;
+					else 
+						stringTela.innerHTML = `Tela ${tela} - ${chance} chances`;
+			}
 		}
-		function mostrarGameover(){
-			stringTela.innerHTML = "Acabaram seus palpites! \nClique " + segredo + " para tela menu";
-			stringPalpites.innerHTML = "Palpites: "  + chance;
-			novaCor = 1;
-		}
-		function mostrarDica(dica){
-			stringTela.innerHTML = "Tela "+ tela + " | O número é "+ dica;
-			stringPalpites.innerHTML = "Palpites: "  + chance;
-		}		
+		
 		function createLink() {
 			let anchor = document.createElement('a');
 			let link = document.createTextNode("TELAS 51 a 100 LIBERADAS");
