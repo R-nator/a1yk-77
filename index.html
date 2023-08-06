@@ -25,23 +25,17 @@
 		}		
 			
 		#divTela {
-			background:  rgb(2, 2, 80);
+			background:  rgb(250, 250, 250, 0.5);
 			max-width: 344px;
   			font-family: "Lucida Console", "Courier New", monospace;
   			font-size:22px;	
-  			color: #fff;
+  			color: rgb(252, 2, 1);
 		}
 		#divMenu {	
 			max-width: 400px;
 		}
 		#divBotões	{ 
 			max-width: 400px;
-		}
-		#divPalpites {	background:  rgb(71, 0, 0) ;
-			max-width: 344px;
-  			font-family: "Lucida Console", "Courier New", monospace;
-  			font-size:22px;	
-  			color: rgb(252, 229, 83);
 		}
 		.tema {
 			font-family: "Lucida Console", "Courier New", monospace;
@@ -156,7 +150,6 @@
 			document.getElementById("divTela").style.display = 'none';
 			document.getElementById("divMenu").style.display = 'block';
 			document.getElementById("divBotões").style.display = 'none';
-			//document.getElementById("divPalpites").style.display = 'none';	
 		}		
 		document.getElementById("bot2").disabled = true;
 		document.getElementById("bot3").disabled = true;
@@ -168,15 +161,12 @@
 			chance = 5;
 			stringTela = document.getElementById("divTela");
 			stringTela.innerHTML = `Tela ${tela} - ${chance} chances`;
-			//stringPalpites = document.getElementById("divPalpites");
-			//stringPalpites.innerHTML = "Palpites: "  + chance;
 			mostrarTelaNumerosChances()	;		
 		}		
 		function mostrarTelaNumerosChances() {
 			document.getElementById("divTela").style.display = 'block';
 			document.getElementById("divMenu").style.display = 'none';
 			document.getElementById("divBotões").style.display = 'block';
-			//document.getElementById("divPalpites").style.display = 'block';	
 		}
 		let cheat = 0;
 		let bonus = 2;
@@ -191,7 +181,6 @@
 			}
 		}
 		let segredo = Math.floor(Math.random()*arrayBotões.length) + 1;		
-		//console.log("segredo=",segredo);
 		for (let i = 0; i < arrayBotões.length; i++) {			
 			arrayBotões[i].addEventListener("click", function() {			
 				if (terminou){
@@ -218,11 +207,9 @@
 					}
 					chance=chance+bonus;			
 					stringTela.innerHTML =`Tela ${tela} - ${chance} chances`;
-					//stringPalpites.innerHTML = "Palpites: "  + chance;
 					terminou = 0;
 					arrayBotões[palpite-1].classList.remove("segredo");
 					segredo = Math.floor(Math.random()*arrayBotões.length) + 1;
-					//console.log("segredo=",segredo);					
 					ativar();
 					registrarAtivos();
 				}
@@ -241,7 +228,6 @@
 					}else{
 						cheat=0;
 					}
-					//console.log("cheat=",cheat);
 					comparar(palpite);
 					desativar();
 				}							
