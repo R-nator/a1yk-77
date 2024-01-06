@@ -29,7 +29,7 @@ function mudarTela251(){
 				document.body.style.backgroundImage="url('https://64.media.tumblr.com/52281b04111d9552cecb67afc208d733/87c7e4f50fed2bb9-12/s2048x3072/edbf2bf6248f7d04ad8a68457c64a4f2dc83d675.jpg')";
 				break;
 				case 10 + nivel:
-				document.body.style.backgroundImage="url('https://64.media.tumblr.com/f085d58a96c7dccdaaa28e7ecb843258/afb793ab254df3a3-11/s1280x1920/4e296cc11e14ce69fcfaeb696bd9426ece64c71f.jpg')";
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/20e8ee16e4cb328f928432f7ccd6e8d0/e2d7e6d06650d833-eb/s500x750/b1ba4e1f524786b928572338ae68fc8ce2ed2d17.jpg')";
 				break;
 				case 11 + nivel:			
 				document.body.style.backgroundImage="url('https://64.media.tumblr.com/af5f38a45b160f7e7f1e4be7b0aa2218/ca76acd3e607b2bc-43/s1280x1920/627a1b9e49fd738f72fb681a26676a8c7b6c3989.jpg')";
@@ -95,7 +95,7 @@ function mudarTela251(){
 				document.body.style.backgroundImage="url('https://64.media.tumblr.com/b504f4fc537d4f8405d71600e86505a6/46240db2990d71ab-42/s400x600/17e71c2dc711565872415bf2e98e0eba4618cc33.pnj')";
 				break;
 				case 32 + nivel:	
-				document.body.style.backgroundImage="url('https://64.media.tumblr.com/c7496ae73f4538b086715ba5021900ea/1c2f4f1623b222f8-62/s1280x1920/d7c72bc23dcea3f121f8441015465bf5871dc121.jpg')";
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/05f0b50d9403b700cf10e8454e3b60a8/7924a930bc5c0853-9f/s500x750/ff9d766a77b82911fc8ea61fcc34b7ccde8c9d2b.jpg')";
 				break;
 				case 33 + nivel:	
 				document.body.style.backgroundImage="url('https://64.media.tumblr.com/90a7338ae129ac06b6250ee7ac8a4864/bbae38da256fd570-22/s500x750/43c4cedba370a8711b6955fff7c4ea0fbd166add.jpg')";
@@ -110,7 +110,7 @@ function mudarTela251(){
 				document.body.style.backgroundImage="url('https://64.media.tumblr.com/27e108dbc8bf94dccef829246f4c1a0f/fe4c3bef0035041d-1c/s500x750/d72c79942b129a45be6896f2f79ce614ec69f1d4.jpg')";
 				break;
 				case 37 + nivel:	
-				document.body.style.backgroundImage="url('https://64.media.tumblr.com/b7f7ff7a6ff60952b39cef5e11e97959/9e541f9482277c16-4d/s500x750/f76280df30b65a97c24960726c906638fd726ce2.jpg')";
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/6ffded1a6ff898f1c6aca099c41319b6/ac09e06e5ee30567-27/s500x750/a467af467c1eaf6924fb0bdfdab32db0bb2d3404.jpg')";
 				break;
 				case 38 + nivel:	
 				document.body.style.backgroundImage="url('https://64.media.tumblr.com/0b9123a322ddc802ca36bf4e7cc66efe/253edbaa7c387125-0a/s500x750/f9e9056da63c678ba642fb4cd013862f08efb4c2.jpg')";
@@ -122,19 +122,19 @@ function mudarTela251(){
 				document.body.style.backgroundImage="url('https://64.media.tumblr.com/2d3c364b3004e18fcc181fc30f56d494/75cbe088951997a9-13/s500x750/6e62028c47b78d8372518ef9dc81ae5dd9a9b5f1.jpg')";
 				break;
 				case 41 + nivel:
-				document.body.style.backgroundImage="url('https://64.media.tumblr.com/05f0b50d9403b700cf10e8454e3b60a8/7924a930bc5c0853-9f/s500x750/ff9d766a77b82911fc8ea61fcc34b7ccde8c9d2b.jpg')";
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/9da4851ad93d40d3453bcab1af5f82fa/7549d18d6665bd74-54/s640x960/c24c4356fa87a7b93fca2b656908889506f24d21.jpg')";
 				break;
 				case 42 + nivel:
-				document.body.style.backgroundImage="url('https://64.media.tumblr.com/20e8ee16e4cb328f928432f7ccd6e8d0/e2d7e6d06650d833-eb/s500x750/b1ba4e1f524786b928572338ae68fc8ce2ed2d17.jpg')";
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/ac3fd0e06bf735217d3e193b7764d090/7549d18d6665bd74-7e/s540x810/9f36110c29c95f08d4f9e878acc34c7ecd10221e.jpg')";
 				break;
 				case 43 + nivel:	
-				document.body.style.backgroundImage="url('https://64.media.tumblr.com/6ffded1a6ff898f1c6aca099c41319b6/ac09e06e5ee30567-27/s500x750/a467af467c1eaf6924fb0bdfdab32db0bb2d3404.jpg')";
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/e59b74395c3a70525b962e3349a560a0/574718768fc2b07a-52/s400x600/776f7d72008ab09bf53d2a3fb0fb14aaa1a2a3a1.jpg')";
 				break;
 				case 44 + nivel:	
-				document.body.style.backgroundImage="url('https://64.media.tumblr.com/69b128eb0656b8995f960121bfdbfa32/1a4f4534434dec0b-61/s2048x3072/9d4309f6f808126ea055050e6254be53172c8ce6.jpg')";
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/0a0d094b879f6c7ee129e2aba8ada5b2/d317a594421d51bf-19/s500x750/e095a201331ef9427e143645604d9429afe77c43.jpg')";
 				break;
 				case 45 + nivel:
-				document.body.style.backgroundImage="url('https://64.media.tumblr.com/241c7b4b789825c8af9afb6e26bd5140/ade8faaf0e973791-fc/s500x750/a1ed9b1f04195e74d1124e7f82f77eed49b221ca.jpg')";
+				document.body.style.backgroundImage="url('https://64.media.tumblr.com/cfe58cc595d75ed0a1bb55c497536ba0/fec2f0e93d0e8abe-f2/s400x600/a9f1dea85e320b418ee3f725002e922bd752db6d.jpg')";
 				break;
 				case 46 + nivel:
 				document.body.style.backgroundImage="url('https://64.media.tumblr.com/60324c6b0ff822ba2b7dc348e0c03d88/bc5cd04445bc5c22-81/s1280x1920/647e361d7311ad6584e2c550f31a243c7e71a772.jpg')";
