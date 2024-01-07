@@ -1,27 +1,28 @@
 let nivel = 0;
-let ultimoNivel = 400; //vai ate a tela 450
+let ultimoNivel = 450; //vai ate a tela 500
 let telaIni = "url('https://64.media.tumblr.com/85b3857cca4ea3c1bf6087c610e43745/55112aed06d34f7a-fe/s2048x3072/879136c914451b60178d432ea981bb4e5ea3f36a.pnj')";
 		mostrarMenu();
 		function mostrarMenu(){
 			if (nivel===50)
-			telaIni = "url('https://64.media.tumblr.com/6c6be6b07724d3e709415d6e2fdee5aa/14325a69374aee55-e4/s250x400/02e8def2e5597e70aedb8490305b47a9563331de.gifv')";
+			telaIni = "url('https://64.media.tumblr.com/284606be5e434d188df35ca467b0be3d/3f1475c448b15e06-a9/s400x600/2b1302310a0745ac3810c231da77da6b1867e983.gifv')";
 			else if (nivel===100)
-				telaIni = "url('https://64.media.tumblr.com/74085e0f3bcce2c9720f9ce1a7ed11b4/0de65dbc5de7cc87-23/s540x810/bf141447554e41a65431b382bb338b3ce6254645.gifv')";
+				telaIni = "url('https://64.media.tumblr.com/40f40cc7c64c5dd07219d7de8d61e063/eefd15f5927fc89b-2f/s540x810/ab5d6a2430177dfa3f5c3159b8f3954b9d9672e6.gifv')";
 			else if (nivel===150)
-				telaIni = "url('https://64.media.tumblr.com/cfcfcfdf859182b5fe03b0c6072bd746/53bc382e63d71f2c-63/s540x810/f42b796e22f34b8451eb1484eff87a5f3f731ae0.gifv')";
+				telaIni = "url('https://64.media.tumblr.com/dd97e07ec58fded7ce8bdc09784f023a/d0cbff962c057608-e2/s500x750/189a3c7e52cc466c28c0501f8e97c2440b843ba5.gifv')";
 			else if (nivel===200)
-				telaIni = "url('https://64.media.tumblr.com/3ca181c7520919efb78656a63e42de90/57488b74b3cbeddb-e2/s540x810/87599bbca907364bcc2853a3dd85e34a5abe26b4.jpg')";
-			else if (nivel===250)
-				telaIni = "url('https://64.media.tumblr.com/c2a3ec7a3cec3090f964b8556b86f52a/827552b548c00657-ad/s500x750/b66ed2650ccca759c08120876aa1dbcc2f2316ed.jpg')";
-			else if (nivel===300)
-				telaIni = "url('https://64.media.tumblr.com/1b67d9650acf9bd345f4915d5688f0a5/9ba806d91d1ae575-ef/s500x750/84fb9f889cd3f4b945c4af1cdbb6ef454f55fd7f.gifv')";
-			else if (nivel===350)
 				telaIni = "url('https://64.media.tumblr.com/9e54154aa434aa42a4fe2730f8a7094b/e2381d800a16d708-c8/s400x600/57f68175f9fd89b63140b040427c9ed0892ad506.gifv')";
+			else if (nivel===250)
+				telaIni = "url('https://64.media.tumblr.com/8b851ce0c5f7c6ac4b7ac165e558558d/867185b37d472a88-92/s400x600/8726eef74c0bacd4aff8387e04552c53632fa8c0.gifv')";
+			else if (nivel===300)
+				telaIni = "url('https://64.media.tumblr.com/6cc531054411096b31df383efb198296/9b85f58624ddf202-0b/s400x600/6dd1f1e121de15da360cf6d95bb496d69709bec4.gifv')";
+			else if (nivel===350)
+				telaIni = "url('https://64.media.tumblr.com/e9999117607116e9dfc319467117059b/29b78acfb11637fa-f1/s400x600/211711006941b012100c9ad4eff7d095a1fb8837.gifv')";
 			else if (nivel===400)
-			telaIni = "url('https://64.media.tumblr.com/87c3fa2958fc7a38acaca9a57e3bafe8/b6219b541402ca85-52/s400x600/ccbd86223aefab0edc78b8b0a1d8a4076695edc7.webp')";
-			//else if (nivel===450)
+				telaIni = "url('https://64.media.tumblr.com/87c3fa2958fc7a38acaca9a57e3bafe8/b6219b541402ca85-52/s400x600/ccbd86223aefab0edc78b8b0a1d8a4076695edc7.webp')";
+			else if (nivel===450)
+				telaIni = "url('https://64.media.tumblr.com/b05c3758de5d441fa9c3ac8b10e7b5c6/c4fd32287754e5bd-e2/s400x600/d0d4cbc2d126c4fd220ac514c4606780a7d3eea1.gifv')";
+			//else if (nivel===500)
 			//	telaIni = "url('')";
-		
 			document.body.style.backgroundImage = telaIni;
 			document.getElementById("divTela").style.display = 'none';
 			document.getElementById("divMenu").style.display = 'block';
@@ -46,9 +47,13 @@ let telaIni = "url('https://64.media.tumblr.com/85b3857cca4ea3c1bf6087c610e43745
 				mudarTela301();
 			else if (tela>=351&&tela<401)
 				mudarTela351();
-		//else if (tela>=401&&tela<451)
-			//	mudarTela401();
-		//<script src="assets/telas401.js"></script>
+			else if (tela>=401&&tela<451)
+				mudarTela401();
+			else if (tela>=451&&tela<501)
+				mudarTela451();
+			//else if (tela>=501&&tela<551)
+			//	mudarTela501();
+		//<script src="assets/telas501.js"></script>
 			else 
 				mudarTela();
 		}
